@@ -19,7 +19,8 @@ public func configure(_ app: Application) throws {
     app.migrations.add(CreateTodo())
 
     app.views.use(.leaf)
-
+    app.http.server.configuration.hostname = "127.0.0.1";
+    app.http.server.configuration.port = 8000;
     
 
     // register routes
